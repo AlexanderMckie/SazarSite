@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 107.9 57.03">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="394.91" y1="33.51" x2="395.77" y2="13.65" gradientTransform="translate(-327.04)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#445456" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="368.66" y1="88.71" x2="367.28" y2="-26.16" gradientTransform="translate(-327.04)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b1b3a5"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="394.38" y1="103.18" x2="393.17" y2="1.54" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-4" x1="83.65" y1="86.16" x2="76.22" y2="16.39" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="344.92" y1="31.46" x2="345.78" y2="11.6" xlink:href="#linear-gradient"/>
+  </defs>
+  <polyline class="cls-1" points="49.99 27.5 49.99 22.92 54.58 22.92 54.58 18.33 59.16 18.33 59.16 13.75 72.91 13.75 72.91 9.17 82.08 9.17 82.08 18.33 86.66 18.33 86.66 22.92 72.91 22.92 72.91 27.5"/>
+  <polyline class="cls-3" points="4.16 36.67 36.24 36.67 36.24 32.08 49.99 32.08 49.99 27.5 49.99 22.92 59.16 22.92 59.16 18.33 68.33 18.33 68.33 13.75 77.49 13.75 77.49 9.17 72.91 9.17 72.91 4.58 63.74 4.58 63.74 0 54.58 0 54.58 4.58 49.99 4.58 49.99 9.17 40.83 9.17 40.83 13.75 36.24 13.75 36.24 18.33 17.91 18.33 17.91 27.5 4.16 27.5"/>
+  <polygon class="cls-4" points="34.57 47.86 34.57 43.28 39.15 43.28 43.73 43.28 43.73 38.69 48.32 38.69 48.32 34.11 52.9 34.11 52.9 29.53 57.48 29.53 57.48 24.94 71.23 24.94 71.23 29.53 80.4 29.53 80.4 34.11 84.98 34.11 84.98 38.69 94.15 38.69 94.15 43.28 98.73 43.28 98.73 47.86 80.4 47.86 80.4 52.44 71.23 52.44 71.23 57.03 57.48 57.03 57.48 52.44 43.73 52.44 43.73 47.86 34.57 47.86"/>
+  <polyline class="cls-5" points="52.9 29.53 57.48 29.53 57.48 24.94 66.65 24.94 66.65 29.53 75.82 29.53 75.82 34.11 80.4 34.11 84.98 34.11 84.98 38.69 94.15 38.69 94.15 43.28 107.9 43.28 107.9 38.69 98.73 38.69 98.73 34.11 89.57 34.11 89.57 29.53 80.4 29.53 80.4 20.36 62.07 20.36 52.9 20.36 52.9 24.94 48.32 24.94 48.32 29.53"/>
+  <polyline class="cls-2" points="0 25.45 0 20.86 4.58 20.86 4.58 16.28 9.17 16.28 9.17 11.7 22.92 11.7 22.92 7.11 32.08 7.11 32.08 16.28 36.67 16.28 36.67 20.86 22.92 20.86 22.92 25.45"/>
+</svg>

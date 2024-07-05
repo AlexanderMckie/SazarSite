@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-7);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient-9);
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-8);
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-734.88" y1="70.59" x2="-734.8" y2="104.8" gradientTransform="translate(-687.98) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#445456" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-806.74" y1="88.18" x2="-806.71" y2="101.99" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="-766.23" y1="16.78" x2="-766.03" y2="99.06" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="-799" y1="169.91" x2="-801.35" y2="-25.9" gradientTransform="translate(-687.98) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b1b3a5"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="-729.98" y1="183.58" x2="-732.84" y2="-55.16" xlink:href="#linear-gradient-4"/>
+    <linearGradient id="linear-gradient-6" x1="-796.91" y1="128.03" x2="-797.64" y2="66.81" xlink:href="#linear-gradient-4"/>
+    <linearGradient id="linear-gradient-7" x1="-743.43" y1="-23.3" x2="-745.43" y2="90.25" gradientTransform="translate(-687.98) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fefdf1"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-8" x1="-784.37" y1="-5.75" x2="-785.59" y2="63.92" xlink:href="#linear-gradient-7"/>
+    <linearGradient id="linear-gradient-9" x1="-812.38" y1="31.69" x2="-813.61" y2="101.36" xlink:href="#linear-gradient-7"/>
+  </defs>
+  <polyline class="cls-1" points="87.5 93.75 56.25 93.75 56.25 100 50 100 50 93.75 25 93.75 25 87.5 12.5 87.5 12.5 81.25 6.25 81.25 6.25 68.75 18.75 68.75 25 68.75 25 75 43.75 75 43.75 81.25 75 81.25 75 87.5 87.5 87.5"/>
+  <polyline class="cls-4" points="118.75 100 100 100 100 93.75 106.25 93.75 106.25 87.5 137.5 87.5 137.5 93.75 118.75 93.75"/>
+  <polyline class="cls-6" points="125 81.25 100 81.25 100 87.5 81.25 87.5 81.25 81.25 56.25 81.25 56.25 75 37.5 75 37.5 68.75 31.25 68.75 31.25 56.25 37.5 56.25 37.5 50 37.5 43.75 43.75 43.75 43.75 37.5 50 37.5 50 43.75 56.25 43.75 56.25 31.25 62.5 31.25 62.5 25 68.75 25 68.75 12.5 81.25 12.5 81.25 25 87.5 25 87.5 31.25 93.75 31.25 93.75 43.75 87.5 43.75 87.5 50 100 50 100 37.5 106.25 37.5 106.25 62.5 112.5 62.5 112.5 68.75 125 68.75"/>
+  <polyline class="cls-9" points="100 50 87.5 50 87.5 43.75 93.75 43.75 93.75 37.5 87.5 37.5 87.5 25 81.25 25 81.25 18.75 93.75 18.75 93.75 25 100 25 100 31.25 112.5 31.25 112.5 43.75 118.75 43.75 118.75 62.5 131.25 62.5 131.25 68.75 143.75 68.75 143.75 75 131.25 75 131.25 81.25 125 81.25 125 68.75 106.25 68.75 106.25 56.25 100 56.25"/>
+  <polyline class="cls-3" points="81.25 12.5 87.5 12.5 87.5 6.25 81.25 6.25 81.25 0 68.75 0 68.75 6.25 56.25 6.25 56.25 12.5 50 12.5 50 18.75 43.75 18.75 43.75 25 31.25 25 31.25 18.75 18.75 18.75 18.75 25 12.5 25 12.5 31.25 18.75 31.25 18.75 37.5 25 37.5 25 43.75 18.75 43.75 18.75 56.25 12.5 56.25 12.5 50 6.25 50 6.25 62.5 0 62.5 0 68.75 18.75 68.75 18.75 75 43.75 75 43.75 68.75 37.5 68.75 37.5 43.75 56.25 43.75 56.25 37.5 62.5 37.5 62.5 31.25 68.75 31.25 68.75 25 75 25 75 12.5"/>
+  <polyline class="cls-2" points="143.75 87.5 143.75 81.25 93.75 81.25 93.75 87.5 81.25 87.5 81.25 81.25 68.75 81.25 68.75 93.75 87.5 93.75 87.5 100 125 100 125 93.75 131.25 93.75 131.25 100 150 100 150 93.75 137.5 93.75 137.5 87.5"/>
+  <polyline class="cls-5" points="75 6.25 62.5 6.25 62.5 18.75 50 18.75 50 25 37.5 25 37.5 37.5 43.75 37.5 43.75 31.25 56.25 31.25 56.25 25 62.5 25 68.75 25 68.75 12.5 75 12.5"/>
+  <polyline class="cls-8" points="93.75 12.5 93.75 18.75 87.5 18.75 87.5 25 100 25 100 31.25 106.25 31.25 106.25 18.75 100 18.75 100 12.5"/>
+  <polyline class="cls-7" points="131.25 68.75 131.25 62.5 125 62.5 125 50 118.75 50 118.75 68.75"/>
+</svg>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 73.33 47.86">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="360.35" y1="24.34" x2="361.2" y2="4.49" gradientTransform="translate(-327.04)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#445456" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="359.82" y1="94.01" x2="358.6" y2="-7.62" gradientTransform="translate(-327.04)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b1b3a5"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="371.21" y1="-10.6" x2="369.75" y2="72.68" gradientTransform="translate(-327.04)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fefdf1"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <polyline class="cls-1" points="15.43 18.33 15.43 13.75 20.01 13.75 20.01 9.17 24.59 9.17 24.59 4.58 38.34 4.58 38.34 0 47.51 0 47.51 9.17 52.09 9.17 52.09 13.75 38.34 13.75 38.34 18.33"/>
+  <polygon class="cls-2" points="0 38.69 0 34.11 4.58 34.11 9.17 34.11 9.17 29.53 13.75 29.53 13.75 24.94 18.33 24.94 18.33 20.36 22.92 20.36 22.92 15.78 36.67 15.78 36.67 20.36 45.83 20.36 45.83 24.94 50.42 24.94 50.42 29.53 59.58 29.53 59.58 34.11 64.17 34.11 64.17 38.69 45.83 38.69 45.83 43.28 36.67 43.28 36.67 47.86 22.92 47.86 22.92 43.28 9.17 43.28 9.17 38.69 0 38.69"/>
+  <polyline class="cls-3" points="18.33 20.36 22.92 20.36 22.92 15.78 32.08 15.78 32.08 20.36 41.25 20.36 41.25 24.94 45.83 24.94 50.42 24.94 50.42 29.53 59.58 29.53 59.58 34.11 73.33 34.11 73.33 29.53 64.17 29.53 64.17 24.94 55 24.94 55 20.36 45.83 20.36 45.83 11.19 27.5 11.19 18.33 11.19 18.33 15.78 13.75 15.78 13.75 20.36"/>
+</svg>
