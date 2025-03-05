@@ -64,7 +64,7 @@ function autoScrollSVG() {
                 svgContainer.style.overflowX = 'auto'; // Show the scrollbar after animation
             },
             onUpdate: function() {
-            const progress = this.progress();
+            const progress = gsap.getProperty(svgObject, "x") / maxScroll;
             if (progress < 0.1) {
                 gsap.to(svgObject, { opacity: progress * 10, duration: 1 });
             } else if (progress > 0.9) {
