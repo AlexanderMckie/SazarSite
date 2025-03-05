@@ -29,19 +29,4 @@ body {
 .SazPiece svg {
     width: 100vw; /* Ensure SVG fills its container */
     
-   
-}
-#svgContainer {
-    width: 100vw; /* Example: Adjust width as needed */
-    height: auto; /* Ensures aspect ratio is maintained */
-    max-width: 100%; /* Ensures SVG doesn't exceed viewport width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.svg-object {
-    width: 100%; /* Make sure the object fills its container */
-    height: auto; /* Maintain aspect ratio */
 }
