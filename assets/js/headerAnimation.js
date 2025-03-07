@@ -113,13 +113,13 @@ function loadSVGIntoElement(svgPath, containerElementId) {
                 embedElement.type = 'image/svg+xml';
                 const blob = new Blob([data], { type: 'image/svg+xml' });
                 const url = URL.createObjectURL(blob);
+                embedElement.classList.add('svg-object');
+                container.appendChild(embedElement);
                 embedElement.src = url;
                 embedElement.onload = () => {
                     URL.revokeObjectURL(url); // Revoke the object URL after the SVG is loaded
                     resolve(embedElement.getSVGDocument()); // Resolve with the getSVGDocument for manipulation
                 };
-                embedElement.classList.add('svg-object');
-                container.appendChild(embedElement);
                 //autoScrollSVG();
             })
             .catch(error => {
