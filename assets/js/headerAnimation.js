@@ -84,7 +84,7 @@ function autoScrollSVG() {
 window.addEventListener('resize', () => {
 
     //autoScrollSVG();
-    adjustSVGSize();
+    //adjustSVGSize();
     
 });
 
@@ -130,7 +130,7 @@ function loadSVGIntoElement(svgPath, containerElementId) {
     });
 }
 document.addEventListener('DOMContentLoaded', () => {
-    adjustSVGSize();
+    //adjustSVGSize();
     //autoScrollSVG();
     loadSVGIntoElement(sazPieceFilePath, sazPieceElementID)
         .then(svgDocument => {
