@@ -41,43 +41,43 @@ function adjustSVGSize() {
 }
 let scrollAnimationFrame;
 
-function autoScrollSVG() {
-    const svgContainer = document.getElementById(sazPieceElementID);
-    const svgObject = svgContainer.querySelector('object.svg-object');
-    if (window.innerWidth < 768 && svgObject) { // Mobile view
-        const maxScroll = svgObject.clientWidth - svgContainer.clientWidth;
-        if (scrollAnimationFrame) {
-            cancelAnimationFrame(scrollAnimationFrame);
-        }
-        gsap.to(svgObject, {
-            x: -maxScroll,
-            duration: 10, // Adjust duration to control the scroll speed
-            ease: "none",
-            repeat: -1, // Infinite loop
-            startAt: { x: -maxScroll * -0.5, opacity: 0 }, // Start from the left position with 0 opacity
-            endAt: { x: 0, opacity: 0 },
-            modifiers: {
-            x: gsap.utils.unitize(x => parseFloat(x) % maxScroll) // Loop the scroll
-            },
-            onStart: () => {
-                svgContainer.style.overflowX = 'hidden'; // Hide the scrollbar
-            },
-            onComplete: () => {
-                svgContainer.style.overflowX = 'auto'; // Show the scrollbar after animation
-            },
-            onUpdate: function() {
-            const progress = gsap.getProperty(svgObject, "x") / maxScroll;
-            if (progress < 0.1) {
-                gsap.to(svgObject, { opacity: progress * 10, duration: 1 });
-            } else if (progress > 0.9) {
-                gsap.to(svgObject, { opacity: (1 - progress) * 10, duration: 1 });
-            } else {
-                gsap.to(svgObject, { opacity: 1, duration: 0 });
-            }
-            }
-        });
-    }
-}
+// function autoScrollSVG() {
+//     const svgContainer = document.getElementById(sazPieceElementID);
+//     const svgObject = svgContainer.querySelector('object.svg-object');
+//     if (window.innerWidth < 768 && svgObject) { // Mobile view
+//         const maxScroll = svgObject.clientWidth - svgContainer.clientWidth;
+//         if (scrollAnimationFrame) {
+//             cancelAnimationFrame(scrollAnimationFrame);
+//         }
+//         gsap.to(svgObject, {
+//             x: -maxScroll,
+//             duration: 10, // Adjust duration to control the scroll speed
+//             ease: "none",
+//             repeat: -1, // Infinite loop
+//             startAt: { x: -maxScroll * -0.5, opacity: 0 }, // Start from the left position with 0 opacity
+//             endAt: { x: 0, opacity: 0 },
+//             modifiers: {
+//             x: gsap.utils.unitize(x => parseFloat(x) % maxScroll) // Loop the scroll
+//             },
+//             onStart: () => {
+//                 svgContainer.style.overflowX = 'hidden'; // Hide the scrollbar
+//             },
+//             onComplete: () => {
+//                 svgContainer.style.overflowX = 'auto'; // Show the scrollbar after animation
+//             },
+//             onUpdate: function() {
+//             const progress = gsap.getProperty(svgObject, "x") / maxScroll;
+//             if (progress < 0.1) {
+//                 gsap.to(svgObject, { opacity: progress * 10, duration: 1 });
+//             } else if (progress > 0.9) {
+//                 gsap.to(svgObject, { opacity: (1 - progress) * 10, duration: 1 });
+//             } else {
+//                 gsap.to(svgObject, { opacity: 1, duration: 0 });
+//             }
+//             }
+//         });
+//     }
+// }
 
 
 
