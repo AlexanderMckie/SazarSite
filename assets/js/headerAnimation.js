@@ -141,8 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 starGroup.push(svgDocument.getElementById(`star${i}`));
             }
 
-            initializeSVGElements(keylineGroup, starGroup);
-            addEventListenersToPieceGroup(pieceGroup, keylineGroup, starGroup);
+            //initializeSVGElements(keylineGroup, starGroup);
+            //addEventListenersToPieceGroup(pieceGroup, keylineGroup, starGroup);
         })
         .catch(error => {
             console.error('Error loading SVG into element:', error);
