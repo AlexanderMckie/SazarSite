@@ -117,8 +117,10 @@ function loadSVGIntoElement(svgPath, containerElementId) {
                 container.appendChild(embedElement);
                 embedElement.src = url;
                 embedElement.onload = () => {
-                    URL.revokeObjectURL(url); // Revoke the object URL after the SVG is loaded
-                    resolve(embedElement.getSVGDocument()); // Resolve with the getSVGDocument for manipulation
+                    setTimeout(() => {
+                        URL.revokeObjectURL(url); // Revoke the object URL after the SVG is loaded
+                        resolve(embedElement.getSVGDocument()); // Resolve with the getSVGDocument for manipulation
+                    }, 0);
                 };
                 //autoScrollSVG();
             })
