@@ -130,115 +130,87 @@ document.addEventListener('DOMContentLoaded', () => {
     autoScrollSVG();
     loadSVGIntoElement(sazPieceFilePath, sazPieceElementID)
         .then(svgDocument => {
-            // Access SVG elements and add animations
             const pieceGroup = svgDocument.getElementById('Piece');
             const keylineGroup = svgDocument.getElementById('keyline');
             const starGroup = [];
-                for (let i = 1; i <= 16; i++){starGroup.push(svgDocument.getElementById(`star${i}`));}
-
-            if (keylineGroup) {
-                keylineGroup.style.opacity = 0; // Set initial opacity to 0
-            }
-            if (starGroup) {
-                starGroup.forEach(star => {
-                    if (star) star.style.opacity = 0; // Set initial opacity to 0 for each star, making them invisible
-                });
+            for (let i = 1; i <= 16; i++) {
+                starGroup.push(svgDocument.getElementById(`star${i}`));
             }
 
-            if (pieceGroup) {
-                // Add event listener for mouseover to change opacity and animate stars
-                pieceGroup.addEventListener('mouseover', () => {
-                    gsap.to(keylineGroup, {
-                        opacity: 1,
-                        duration: 0.3,
-                        ease: "power1.out"
-                    });
-                    starGroup.forEach((star, index) => {
-                        // Create multiple copies of each star and animate them
-                        for (let i = 0; i < 1; i++) { // Assuming we want to create 5 copies
-                            const starCopy = star.cloneNode(true); // Clone the star
-                            star.parentNode.insertBefore(starCopy, star.nextSibling); // Insert the copy after the original star
-            
-                            gsap.fromTo(starCopy, 
-                                { opacity: 1 }, // Start from opacity 1
-                                {
-                                    motionPath: {
-                                        path: [
-                                            {x: 0, y: 0},
-                                            {x: 3, y: -3}, // Moves right and up
-                                            {x: -2, y: -6}, // Moves left and further up
-                                            {x: 2, y: -9}, // Moves right and even further up
-                                            {x: -2, y: -12} // Moves left and to the highest point
-                                        ],
-                                        curviness: .1, // Adjust curviness to make the S shape softer or more pronounced
-                                        autoRotate: false // Optionally, auto-rotate the star to align with the path direction
-                                    },
-                                    opacity: 0, // End at opacity 0
-                                    duration: 1 + Math.random(), // Random duration between 1 and 2 seconds
-                                    delay: index * 0.1 + i * 0.2, // Stagger the animation based on the star index and copy number
-                                    ease: "power1.out",
-                                    onStart: () => { starCopy.style.opacity = 1; }, // Ensure opacity is set to 1 at the start
-                                    onComplete: () => starCopy.remove() // Remove the star copy after animation completes
-                                }
-                            );
-                        }
-                    });
-                });
-
-                // Add touch event listener for mobile devices
-                pieceGroup.addEventListener('touchstart', () => {
-                    gsap.to(keylineGroup, {
-                        opacity: 1,
-                        duration: 0.3,
-                        ease: "power1.out"
-                    });
-                    starGroup.forEach((star, index) => {
-                        // Create multiple copies of each star and animate them
-                        for (let i = 0; i < 1; i++) { // Assuming we want to create 5 copies
-                            const starCopy = star.cloneNode(true); // Clone the star
-                            star.parentNode.insertBefore(starCopy, star.nextSibling); // Insert the copy after the original star
-            
-                            gsap.fromTo(starCopy, 
-                                { opacity: 1 }, // Start from opacity 1
-                                {
-                                    motionPath: {
-                                        path: [
-                                            {x: 0, y: 0},
-                                            {x: 3, y: -3}, // Moves right and up
-                                            {x: -2, y: -6}, // Moves left and further up
-                                            {x: 2, y: -9}, // Moves right and even further up
-                                            {x: -2, y: -12} // Moves left and to the highest point
-                                        ],
-                                        curviness: .1, // Adjust curviness to make the S shape softer or more pronounced
-                                        autoRotate: false // Optionally, auto-rotate the star to align with the path direction
-                                    },
-                                    opacity: 0, // End at opacity 0
-                                    duration: 1 + Math.random(), // Random duration between 1 and 2 seconds
-                                    delay: index * 0.1 + i * 0.2, // Stagger the animation based on the star index and copy number
-                                    ease: "power1.out",
-                                    onStart: () => { starCopy.style.opacity = 1; }, // Ensure opacity is set to 1 at the start
-                                    onComplete: () => starCopy.remove() // Remove the star copy after animation completes
-                                }
-                            );
-                        }
-                    });
-                });
-
-                // Add event listener for mouseout to reset opacity
-                pieceGroup.addEventListener('mouseout', () => {
-                    gsap.to(keylineGroup, {
-                        opacity: 0,
-                        duration: 1,
-                        ease: "power1.in"
-                    }); 
-    
-                });
-            } else {
-                console.error("SVG group with ID 'Piece' not found.");
-            }
+            initializeSVGElements(keylineGroup, starGroup);
+            addEventListenersToPieceGroup(pieceGroup, keylineGroup, starGroup);
         })
         .catch(error => {
             console.error('Error loading SVG into element:', error);
         });
-        
+
+function initializeSVGElements(keylineGroup, starGroup) {
+    if (keylineGroup) {
+        keylineGroup.style.opacity = 0; // Set initial opacity to 0
+    }
+    if (starGroup) {
+        starGroup.forEach(star => {
+            if (star) star.style.opacity = 0; // Set initial opacity to 0 for each star, making them invisible
+        });
+    }
+}
+
+function addEventListenersToPieceGroup(pieceGroup, keylineGroup, starGroup) {
+    if (pieceGroup) {
+        pieceGroup.addEventListener('mouseover', () => {
+            animateKeylineAndStars(keylineGroup, starGroup);
+        });
+
+        pieceGroup.addEventListener('touchstart', () => {
+            animateKeylineAndStars(keylineGroup, starGroup);
+        });
+
+        pieceGroup.addEventListener('mouseout', () => {
+            gsap.to(keylineGroup, {
+                opacity: 0,
+                duration: 1,
+                ease: "power1.in"
+            });
+        });
+    } else {
+        console.error("SVG group with ID 'Piece' not found.");
+    }
+}
+
+function animateKeylineAndStars(keylineGroup, starGroup) {
+    gsap.to(keylineGroup, {
+        opacity: 1,
+        duration: 0.3,
+        ease: "power1.out"
+    });
+    starGroup.forEach((star, index) => {
+        for (let i = 0; i < 1; i++) {
+            const starCopy = star.cloneNode(true);
+            star.parentNode.insertBefore(starCopy, star.nextSibling);
+
+            gsap.fromTo(starCopy, 
+                { opacity: 1 },
+                {
+                    motionPath: {
+                        path: [
+                            {x: 0, y: 0},
+                            {x: 3, y: -3},
+                            {x: -2, y: -6},
+                            {x: 2, y: -9},
+                            {x: -2, y: -12}
+                        ],
+                        curviness: .1,
+                        autoRotate: false
+                    },
+                    opacity: 0,
+                    duration: 1 + Math.random(),
+                    delay: index * 0.1 + i * 0.2,
+                    ease: "power1.out",
+                    onStart: () => { starCopy.style.opacity = 1; },
+                    onComplete: () => starCopy.remove()
+                }
+            );
+        }
+    });
+}
 });
