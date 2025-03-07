@@ -46,7 +46,9 @@ function autoScrollSVG() {
     const svgObject = svgContainer.querySelector('object.svg-object');
     if (window.innerWidth < 768 && svgObject) { // Mobile view
         const maxScroll = svgObject.clientWidth - svgContainer.clientWidth;
-
+        if (scrollAnimationFrame) {
+            cancelAnimationFrame(scrollAnimationFrame);
+        }
         gsap.to(svgObject, {
             x: -maxScroll,
             duration: 10, // Adjust duration to control the scroll speed

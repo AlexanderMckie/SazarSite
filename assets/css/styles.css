@@ -30,3 +30,12 @@ body {
     width: 100vw; /* Ensure SVG fills its container */
     
 }
+
+p{
+    color: white;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
