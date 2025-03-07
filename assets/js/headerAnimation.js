@@ -162,11 +162,11 @@ function initializeSVGElements(keylineGroup, starGroup) {
 function addEventListenersToPieceGroup(pieceGroup, keylineGroup, starGroup) {
     if (pieceGroup) {
         pieceGroup.addEventListener('mouseover', () => {
-            animateKeylineAndStars(keylineGroup, starGroup);
+            //animateKeylineAndStars(keylineGroup, starGroup);
         });
 
         pieceGroup.addEventListener('touchstart', () => {
-            animateKeylineAndStars(keylineGroup, starGroup);
+            //animateKeylineAndStars(keylineGroup, starGroup);
         });
 
         pieceGroup.addEventListener('mouseout', () => {
