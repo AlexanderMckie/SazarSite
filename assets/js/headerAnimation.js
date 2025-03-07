@@ -112,7 +112,12 @@ function loadSVGIntoElement(svgPath, containerElementId) {
                 }
                 const objectElement = document.createElement('object');
                 objectElement.type = 'image/svg+xml';
-                objectElement.data = URL.createObjectURL(new Blob([data], { type: 'image/svg+xml' }));
+                const blob = new Blob([data], { type: 'image/svg+xml' });
+                const url = URL.createObjectURL(blob);
+                objectElement.data = url;
+                objectElement.onload = () => {
+                    URL.revokeObjectURL(url); // Revoke the object URL after the SVG is loaded
+                };
                 objectElement.classList.add('svg-object');
                 container.appendChild(objectElement);
                 objectElement.onload = () => {
