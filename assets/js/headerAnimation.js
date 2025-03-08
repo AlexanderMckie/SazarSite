@@ -95,42 +95,9 @@ const sazPieceElementID = "SazPiece";
 // }
 
 
-function loadSVGIntoElement(svgPath, containerElementId) {
-    return new Promise((resolve, reject) => {
-        fetch(svgPath)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Network response was not ok: ${response.statusText}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                const container = document.getElementById(containerElementId);
-                if (!container) {
-                    throw new Error(`Element with id ${containerElementId} not found.`);
-                }
-                const embedElement = document.createElement('embed');
-                embedElement.type = 'image/svg+xml';
-                const blob = new Blob([data], { type: 'image/svg+xml' });
-                const url = URL.createObjectURL(blob);
-                embedElement.classList.add('svg-object');
-                container.appendChild(embedElement);
-                embedElement.src = url;
-                embedElement.onload = () => {
-                    setTimeout(() => {
-                        URL.revokeObjectURL(url); // Revoke the object URL after the SVG is loaded
-                        resolve(embedElement.getSVGDocument()); // Resolve with the getSVGDocument for manipulation
-                    }, 0);
-                };
-                //autoScrollSVG();
-            })
-            .catch(error => {
-                console.error('Error loading SVG:', error);
-                reject(error); // Reject the promise if there's an error
-            });
-            
-    });
-}
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     //adjustSVGSize();
     //autoScrollSVG();
